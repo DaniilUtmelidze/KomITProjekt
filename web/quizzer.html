@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stem til Kommunalvalget</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<header>
+    <a href="start.html">
+      <img src="stemfor.png" alt="Stem For Fremtiden" class="logo-kampagne" />
+    </a>
+    <div class="nav-links">
+      <a href="start.html#hvorfor">Hvad stemmer vi om?</a>
+      <a href="start.html#hvem">Hvem kan stemme?</a>
+      <a href="hvordan.html">Hvordan stemmer jeg?</a>
+      <a href="#top">Kandidattest & quizzer</a>
+    </div>
+    <label class="dark-toggle">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+</header>
+
+<div class="container">
+    <h1>Hvis du er i tvivl, hvilken parti vil du stemme på, så er vores kandidattest her for at hjælpe dig med det!</h1>
+</div>
+<a id = "k" style="display: block; margin-left: auto; margin-right: auto; width: 40%; text-align: center;" href="quiz2.html" class="fancy-button">Kandidattest</a>
+<p></p>
+<a id = "q" href="kompas.html" class="fancy-button">Kandidattest (beta-version)</a>
+
+<div class="container">
+  <h1>Desuden finder du på denne side andre sjove quizzer, som du kunne bruge for at teste din viden om valg og demokrati</h1>
+<a class="image-link" href="https://ed.icivics.org/games/cast-your-vote">
+  <div class = "image-box"> 
+    <img src="CYV.png" title="Cast Your Vote">
+  </div>
+  <h3>Cast Your Vote</h3> 
+</a>
+<script>
+  const toggle = document.getElementById('darkModeToggle');
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+<a href="quiz1.html" class="fancy-button">Hvad bestemmer kommuner og regioner?</a>
+</div>
+<footer>
+  <a href="https://www.ism.dk" target="_blank">
+    <img src="inden.png" alt="Ministeriet" class="logo-ministeriet" />
+  </a>
+  <p>&copy; 2025 Kampagnen "Stem Nu" – Udviklet som del af Kom/IT C-projekt</p>
+  <p>Kampagnen "Stem Nu" er udarbejdet af Indenrigs- og Sundhedsministeriet for at øge valgdeltagelsen, og oplyse den unge befolkning om kommunalvalg, dens funktion og vigtighed til det danske demokrati.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Mappen "web" indeholder alle sider, som udgør min website. Alle siderne er HTML-filer og kan derfor åbnes i enhver browser, man skal bare dobbeltklikke den side, man vil åbne. For at starte, skal man først åbne "start.html" - det er startsiden. Derfra kan du nemt navigere til alle andre sider, men hvis du vil gerne at besøge en af dem hurtigt, så kan du gøre det ved at åbne den direkte fra mappen.
+
+Andre filer i mappen "web" er en CSS-fil (som bestemmer, hvordan websiten ser ud, og som derfor skal ikke åbnes eller ændres) og billeder som jeg har brugt.
+
+Udover websiten, ligger her resten af mine produkter - 3 plakater og 1 video.

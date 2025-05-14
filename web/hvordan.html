@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stem til Kommunalvalget</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+  <header>
+    <a href="start.html">
+      <img src="stemfor.png" alt="Stem For Fremtiden" class="logo-kampagne" />
+    </a>
+    <div class="nav-links">
+      <a href="start.html#hvorfor">Hvad stemmer vi om?</a>
+      <a href="start.html#hvem">Hvem kan stemme?</a>
+      <a href="#top">Hvordan stemmer jeg?</a>
+      <a href="quizzer.html">Kandidattest & quizzer</a>
+    </div>
+    <label class="dark-toggle">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+</header>
+<div class="hero">
+<h1>Hvordan stemmer jeg?</h1>
+<h4>Hvem kan stemme? Hvornår kan jeg stemme? Hvordan brevstemmer jeg?
+</h4>
+<h4>Her kan du finde svar på de mest almindelige spørgsmål om, hvordan du deltager i kommunal- og regionsvalg.
+</h4>
+<h3>Hurtig vejledning</h3>
+<img src="hurvej.png" alt="Stem.dk" style="width:100%; max-width:600px;" />
+<p style="font-style:italic; font-size: smaller;">(Billede: Stem.dk)</p>
+<p> </p>
+<h3>Se en kort, men illustrativ og humoristisk video om hele stemmeprocessen:</h3>
+<p></p>
+<iframe width="480" height="270" src="https://www.youtube.com/embed/i9WeGx8YZ4I"></iframe>
+</div>
+<h2>Hvornår er der kommunal- og regionsvalg?</h2>
+<p>Der er kommunal- og regionsvalg tirsdag den 18. november 2025. Du kan stemme på dit lokale valgsted i tidsrummet kl. 8-20.</p>
+<h2>Hvem kan stemme?</h2>
+<p>Alle, der er fyldt 18 år og har fast bopæl i kommunen/regionen, kan stemme til valget, hvis de opfylder et af følgende kriterier:</p>
+<ul>
+<li>er dansk statsborger</li>
+<li>er statsborger i et af de øvrige EU medlemslande, Island eller Norge</li>
+<li>har haft fast bopæl i Danmark, Grønland eller Færøerne de sidste 4 år</li>
+</ul>
+<h2>Hvordan stemmer jeg?</h2>
+<p>Hvis du kan stemme, modtager du automatisk et valgkort senest 5 dage før valgdagen. På valgkortet står der hvor og hvornår, du kan stemme. På valgdagen tager du dit valgkort med hen til valgstedet. Her bytter du valgkortet til to stemmesedler &#8211; én til kommunalvalg og én til regionsvalg.<br/>
+For at stemme skal du sætte kryds ved et partinavn eller en kandidat. Du må kun sætte 1 kryds på hver af de to stemmesdler. Du stemmer bag et forhæng i en stemmeboks og bagefter afleverer du stemmesedlen i en lukket kasse. Der er folk på valgstedet til at hjælpe dig, hvis du er i tvivl om noget.</p>
+<h2>Hvad gør jeg, hvis jeg har glemt mit valgkort?</h2>
+<p>Har du ikke medbragt dit valgkort, kan du få udskrevet et nyt på stedet. I den forbindelse vil du blive bedt om at oplyse navn og bopæl samt eventuelt fremvise billedlegitimation.</p>
+<h2>Hvordan brevstemmer man til kommunal- og regionsvalget?</h2>
+<p>Alle kan brevstemme. Man kan brevstemme få uger inden valgdagen ved at møde op på kommunernes borgerservicecenter eller et andet brevstemmested.</p>
+<p><a href="https://www.borger.dk/samfund-og-rettigheder/demokrati-og-valg/Kommunal--og-regionsvalg/Brevstemme-til-kommunal--og-regionsvalg">Læs vejledning til brevstemmeafgivning her.</a></p>
+<script>
+  const toggle = document.getElementById('darkModeToggle');
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
+<footer>
+  <a href="https://www.ism.dk" target="_blank">
+    <img src="inden.png" alt="Ministeriet" class="logo-ministeriet" />
+  </a>
+  <p>&copy; 2025 Kampagnen "Stem Nu" – Udviklet som del af Kom/IT C-projekt</p>
+  <p>Kampagnen "Stem Nu" er udarbejdet af Indenrigs- og Sundhedsministeriet for at øge valgdeltagelsen, og oplyse den unge befolkning om kommunalvalg, dens funktion og vigtighed til det danske demokrati.</p>
+  </p>
+</footer>
+</body>
+</html>

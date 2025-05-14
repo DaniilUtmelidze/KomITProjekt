@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz: Hvad bestemmer kommunen over?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: auto;
+      padding: 1em;
+    }
+    .question { margin-bottom: 1.5em; }
+    .result { font-weight: bold; margin-top: 1em; }
+    button { margin-top: 1em; }
+  </style>
+</head>
+<body>
+
+<div class="kompas-container">
+  <h2>Quiz: Hvad bestemmer kommunen over?</h2>
+  <form id="kompasForm">
+    <div class="question">
+      <p>1. Hvem har ansvar for folkeskolerne?</p>
+      <label><input type="radio" name="q1" value="a"> Regeringen</label><br>
+      <label><input type="radio" name="q1" value="b"> Kommunen</label><br>
+      <label><input type="radio" name="q1" value="c"> EU</label>
+    </div>
+
+    <div class="question">
+      <p>2. Hvem bestemmer, hvor meget du betaler i grundskyld?</p>
+      <label><input type="radio" name="q2" value="a"> Kommunen</label><br>
+      <label><input type="radio" name="q2" value="b"> Folketinget</label><br>
+      <label><input type="radio" name="q2" value="c"> Regionen</label>
+    </div>
+
+    <div class="question">
+      <p>3. Hvem beslutter, hvor nye cykelstier skal laves?</p>
+      <label><input type="radio" name="q3" value="a"> Kommunen</label><br>
+      <label><input type="radio" name="q3" value="b"> Trafikministeriet</label><br>
+      <label><input type="radio" name="q3" value="c"> EU-kommissionen</label>
+
+    <div class="question">
+        <p>Hvem har ansvaret for sygehusvæsenet?</p>
+        <label><input type="radio" name="q4" value="a"> Kommunen</label><br>
+        <label><input type="radio" name="q4" value="b"> Regionen</label><br>
+        <label><input type="radio" name="q4" value="c"> EU-kommissionen</label>
+    <div class="question">
+        <p>Hvem har ansvaret for ældreplejen?</p>
+        <label><input type="radio" name="q5" value="a"> Kommunen</label><br>
+        <label><input type="radio" name="q5" value="b"> Regionen</label><br>
+        <label><input type="radio" name="q5" value="c"> EU-kommissionen</label>
+    <div class="question">
+        <p>Hvem har ansvaret for dagplejer, vuggestuer og børnehaver?</p>
+        <label><input type="radio" name="q6" value="a"> Kommunen</label><br>
+        <label><input type="radio" name="q6" value="b"> Regionen</label><br>
+        <label><input type="radio" name="q6" value="c"> EU-kommissionen</label>
+    <div class="question">
+        <p>Hvem har ansvaret for oprensning af forurening ved Høfde 42?</p>
+        <label><input type="radio" name="q7" value="a"> Kommunen</label><br>
+        <label><input type="radio" name="q7" value="b"> Regionen</label><br>
+        <label><input type="radio" name="q7" value="c"> EU-kommissionen</label>
+    <div class="question">
+        <p>Hvem har ansvaret for integrationsindsatsen og sprogundervisning af indvandrere?</p>
+        <label><input type="radio" name="q8" value="a"> Kommunen</label><br>
+        <label><input type="radio" name="q8" value="b"> Regionen</label><br>
+        <label><input type="radio" name="q8" value="c"> EU-kommissionen</label>
+    <div class="question">
+        <p>Hvor mange regioner? <!--(dårligt spørgsmål)?--></p>
+        <label><input type="radio" name="q9" value="a"> 5</label><br>
+        <label><input type="radio" name="q9" value="b"> 7</label><br>
+        <label><input type="radio" name="q9" value="c"> 9</label>
+    <div class="question">
+        <p>Hvem mange kommuner?<!--det samme?--></p>
+        <label><input type="radio" name="q10" value="a"> 56</label><br>
+        <label><input type="radio" name="q10" value="b"> 73</label><br>
+        <label><input type="radio" name="q10" value="c"> 98</label>
+    </div>
+
+      <button type="button" onclick="beregnResultat()">Se resultat</button>
+  </form>
+
+  <div id="resultat" class="result-box"></div>
+</div>
+<style>
+  .kompas-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f5f5f5;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+  }
+
+  .kompas-container h2 {
+      text-align: center;
+      color: #0044cc;
+  }
+
+  .question {
+      margin: 20px 0;
+  }
+
+  .question p {
+      font-weight: bold;
+  }
+
+  .question label {
+      margin-right: 15px;
+  }
+
+  .result-box {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-left: 5px solid #ff6600;
+      font-size: 18px;
+      display: none;
+  }
+
+  button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  button:hover {
+      background-color: #cc5200;
+  }
+</style>
+
+<script>
+  const answers = {
+    q1: 'b',
+    q2: 'a',
+    q3: 'a',
+    q4: 'b',
+    q5: 'a',
+    q6: 'a',
+    q7: 'b',
+    q8: 'a',
+    q9: 'a',
+    q10: 'c',
+  };
+
+  function beregnResultat() {
+    let score = 0;
+    for (let key in answers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === answers[key]) {
+        score++;
+      }
+    }
+
+    const resultatBox = document.getElementById("resultat");
+    resultatBox.style.display = "block";
+    resultatBox.textContent = `Du svarede rigtigt på ${score} ud af 10 spørgsmål.`;
+  }
+</script>
+
+</body>
+</html>

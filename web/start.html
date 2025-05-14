@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stem For Fremtiden</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<header>
+    <a href="start.html">
+      <img src="stemfor.png" alt="Stem For Fremtiden" class="logo-kampagne" />
+    </a>
+    <div class="nav-links">
+      <a href="#hvorfor">Hvad stemmer vi om?</a>
+      <a href="#hvem">Hvem kan stemme?</a>
+      <a href="#hvordan">Hvordan stemmer jeg?</a>
+      <a href="#quiz">Kandidattest & quizzer</a>
+    </div>
+    <label class="dark-toggle">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+</header>
+<div class="hero">
+<div class="countdown-container">
+  <h2>Der er stadig tid til kommunalvalget:</h2>
+  <h1 id="k_r"></h1>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 18, 2025 8:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("k_r").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("k_r").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+  <div class="hero">
+    <div class="slogan">Den 18. november 2025 er der kommunal- og regionsvalg i Danmark.</div>
+    <div class="slogan">Det er din mulighed for at få indflydelse på, hvem der skal lede udviklingen af din kommune og region de næste fire år.</div>
+    <img src="front3.jpg" style="width:100%; max-width:600px;" />
+    <p style="font-style: italic; font-size: smaller;">(Foto: Mads Claus Rasmussen/Ritzau Scanpix)</p>
+    <h1 id="slogan" class="slogan">Din stemme tæller.</h1>
+    </div>
+  <script>
+    const slogans = [
+      "Valg er magt – brug den!",
+      "Du bestemmer – stem!",
+      "Din stemme tæller. Mere end du tror.",
+      "Giv et like til demokratiet – stem!",
+      "Valgdag = magtdag"
+    ];
+    const chosenSlogan = slogans[Math.floor(Math.random() * slogans.length)];
+    document.getElementById("slogan").textContent = chosenSlogan;
+  </script>
+  <main>
+
+    <section id="hvorfor" class="section">
+      <h2>Hvad stemmer vi om?</h2>
+      <p>Kommunerne sørger for alt fra børnehaver og skoler til sportshaller, cykelstier og klimaindsats.
+        Regionerne tager sig af sygehuse, psykiatri og kollektiv transport.</p>
+      <p>Derfor har din stemme betydning for din hverdag.</p>
+      <a href="https://www.ism.dk/indenrigs/kommunal-og-regionaloekonomi/kommunale-opgaver-og-struktur/kommunernes-og-regionernes-opgaver" class="learn-more">Mere om kommuner</a>
+      <a href="https://www.regioner.dk/services/nyheder/2021/oktober/din-stemme-goer-en-forskel-for-din-hverdag" class="learn-more">Mere om regioner</a>
+    </section>
+
+    <section id="hvem" class="section">
+      <h2>Hvem kan stemme?</h2>
+      <p>Alle, der er fyldt 18 år og har fast bopæl i kommunen henholdsvis regionen, kan stemme til valget, hvis de opfylder et af følgende kriterier:</p>
+<ul>
+<li>er dansk statsborger</li>
+<li>er statsborger i et af de øvrige EU medlemslande, Island eller Norge</li>
+<li>har haft fast bopæl i Danmark, Grønland eller Færøerne de sidste 4 år</li>
+</ul>
+<p>Dvs. i modsætning til folketingsvalg kan (nogle) fastboende med tredjelandsstatsborgerskab stemme i kommunalvalg og de får derfor også valgkort.<p>
+    </section>
+ 
+    <section id="hvordan" class="section">
+      <h2>Hvordan stemmer jeg?</h2>
+      <p>At stemme er nemt – og det gør en forskel.
+        <ul>
+        <li>1. Før valgdagen får du et valgkort med posten.</li>
+        
+       <li>2. På valgdagen møder du op ved det sted, der står på kortet.</li>
+        
+       <li> 3. Husk at tage gyldig ID med (f.eks. sygesikringskort eller kørekort).</li>
+        
+        <li>4. Inde i valglokalet får du dine stemmesedler og går ind bag en skærm.</li>
+        
+       <li> 5. Du sætter dit kryds ved den kandidat eller liste, du vil støtte.</li>
+        
+       <li> 6. Aflevér stemmen – færdig!</li>
+      </ul>
+Du kan også brevstemme, hvis du ikke kan nå valgstedet på valgdagen.</p>
+      <a href="hvordan.html" class="learn-more">Læs mere</a>
+      <a href="https://www.borger.dk/samfund-og-rettigheder/demokrati-og-valg/Kommunal--og-regionsvalg/Brevstemme-til-kommunal--og-regionsvalg" class="learn-more">Om at brevstemme</a>
+    </section>
+
+    <section id="quiz" class="section">
+      <h2>Kandidattest og quizzer</h2>
+      <p>Måske kender du ikke så meget til politik og ved derfor ikke, hvem du vil helst stemme på.
+        Bare rolig! Tag en kandidattest for at finde ud af, hvilken parti du er mest med.
+      Desuden kan du tjekke ud andre quizzer og spil og udbrede din viden om kommunal demokrati.</p>
+      <a href="quiz2.html" class="learn-more">Tag kandidattest</a>
+      <a href="quizzer.html" class="learn-more">Se alle quizzer</a>
+    </section>
+  
+    <section id="some" class="section"><h2>Følg kampagnen på sociale medier med #STEMNU</h2></section>
+  </main>
+
+</div>
+
+<script>
+  const toggle = document.getElementById('darkModeToggle');
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+<footer>
+  <a href="https://www.ism.dk" target="_blank">
+    <img src="inden.png" alt="Ministeriet" class="logo-ministeriet" />
+  </a>
+  <p>&copy; 2025 Kampagnen "Stem Nu" – Udviklet som del af Kom/IT C-projekt</p>
+  <p>Kampagnen "Stem Nu" er udarbejdet af Indenrigs- og Sundhedsministeriet for at øge valgdeltagelsen, og oplyse den unge befolkning om kommunalvalg, dens funktion og vigtighed til det danske demokrati.</p>
+  </p>
+</footer>
+
+</body>
+</html>

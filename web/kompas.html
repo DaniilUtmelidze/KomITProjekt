@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stem til Kommunalvalget</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<header>
+        <a href="https://www.ism.dk" target="_blank">
+          <img src="inden.png" alt="Ministeriet" class="logo-ministeriet" />
+        </a>
+        <a href="start.html">
+          <img src="stemfor.png" alt="Stem For Fremtiden" class="logo-kampagne" />
+        </a>
+        <div class="nav-links">
+          <a href="valget.html">Om valget</a>
+          <a href="hvorfor.html">Hvorfor</a>
+          <a href="hvordan.html">Hvordan</a>
+          <a href="quizzer.html">Quiz + Valgkompas</a>
+          <a href="info.html">Om kampagnen</a>
+        </div>
+</header>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+    color: #0044cc;
+  }
+  .question {
+    margin-bottom: 25px;
+  }
+  .question p {
+    font-weight: bold;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #resultat {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<h1>Find dit politiske match</h1>
+<form id="kompasForm">
+  <div class="question">
+    <p>1. Skatten skal sænkes for alle borgere</p>
+    <label><input type="radio" name="q1" value="-2"> Helt uenig</label>
+    <label><input type="radio" name="q1" value="-1"> Uenig</label>
+    <label><input type="radio" name="q1" value="0"> Neutral</label>
+    <label><input type="radio" name="q1" value="1"> Enig</label>
+    <label><input type="radio" name="q1" value="2"> Helt enig</label>
+  </div>
+
+  <div class="question">
+    <p>2. Kommunen bør investere mere i kollektiv transport</p>
+    <label><input type="radio" name="q2" value="2"> Helt enig</label>
+    <label><input type="radio" name="q2" value="1"> Enig</label>
+    <label><input type="radio" name="q2" value="0"> Neutral</label>
+    <label><input type="radio" name="q2" value="-1"> Uenig</label>
+    <label><input type="radio" name="q2" value="-2"> Helt uenig</label>
+  </div>
+
+  <div class="question">
+    <p>3. Kommunen skal prioritere grønne løsninger, selv hvis det koster ekstra</p>
+    <label><input type="radio" name="q3" value="2"> Helt enig</label>
+    <label><input type="radio" name="q3" value="1"> Enig</label>
+    <label><input type="radio" name="q3" value="0"> Neutral</label>
+    <label><input type="radio" name="q3" value="-1"> Uenig</label>
+    <label><input type="radio" name="q3" value="-2"> Helt uenig</label>
+  </div>
+
+  <div class="question">
+    <p>4. Lokale skoler skal have flere penge, selv på bekostning af andre områder</p>
+    <label><input type="radio" name="q4" value="2"> Helt enig</label>
+    <label><input type="radio" name="q4" value="1"> Enig</label>
+    <label><input type="radio" name="q4" value="0"> Neutral</label>
+    <label><input type="radio" name="q4" value="-1"> Uenig</label>
+    <label><input type="radio" name="q4" value="-2"> Helt uenig</label>
+  </div>
+
+  <div class="question">
+    <p>5. Kommunen skal stille højere krav til integration</p>
+    <label><input type="radio" name="q5" value="2"> Helt enig</label>
+    <label><input type="radio" name="q5" value="1"> Enig</label>
+    <label><input type="radio" name="q5" value="0"> Neutral</label>
+    <label><input type="radio" name="q5" value="-1"> Uenig</label>
+    <label><input type="radio" name="q5" value="-2"> Helt uenig</label>
+  </div>
+
+  <button type="button" onclick="beregnMatch()">Se resultat</button>
+</form>
+
+<div id="resultat"></div>
+
+<script>
+  function beregnMatch() {
+    let total = 0;
+    let count = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      const val = document.querySelector(`input[name='q${i}']:checked`);
+      if (val) {
+        total += parseInt(val.value);
+        count++;
+      }
+    }
+
+    let output = "";
+    if (count < 5) {
+      output = "Svar venligst på alle spørgsmål.";
+    } else if (total >= 6) {
+      output = "Du læner dig mod et grønt og socialt ansvarligt parti.";
+    } else if (total >= 1) {
+      output = "Du har tendens til midten med en social nuance.";
+    } else if (total <= -6) {
+      output = "Du læner dig mod et økonomisk fokuseret og liberalt parti.";
+    } else {
+      output = "Du ligger tæt på midten og prioriterer balance.";
+    }
+
+    document.getElementById("resultat").textContent = output;
+  }
+</script>
+</body>
+</html>
